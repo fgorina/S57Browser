@@ -11,6 +11,17 @@
 		EF1DCA0029F6C3CD00E2D898 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DC9FF29F6C3CD00E2D898 /* ContentView.swift */; };
 		EF1DCA0229F6C3CF00E2D898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1DCA0129F6C3CF00E2D898 /* Assets.xcassets */; };
 		EF1DCA0629F6C3CF00E2D898 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1DCA0529F6C3CF00E2D898 /* Preview Assets.xcassets */; };
+		EF1DCA1129F6C70500E2D898 /* S57Parser in Frameworks */ = {isa = PBXBuildFile; productRef = EF1DCA1029F6C70500E2D898 /* S57Parser */; };
+		EF1DCA1329F6CFDE00E2D898 /* URL + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DCA1229F6CFDE00E2D898 /* URL + Extensions.swift */; };
+		EFC15FD529F8F038008CEBAE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FD429F8F038008CEBAE /* MapView.swift */; };
+		EFC15FDF29F8F6C7008CEBAE /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = EFC15FDE29F8F6C7008CEBAE /* SQLite */; };
+		EFC15FE129F8FC96008CEBAE /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FE029F8FC96008CEBAE /* Feature.swift */; };
+		EFC15FE329F90196008CEBAE /* S57Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FE229F90196008CEBAE /* S57Overlay.swift */; };
+		EFC15FE529F902FE008CEBAE /* MKCoordinateRegion + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FE429F902FE008CEBAE /* MKCoordinateRegion + Utils.swift */; };
+		EFC15FEB29F9441B008CEBAE /* UIImage + Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEA29F9441B008CEBAE /* UIImage + Resize.swift */; };
+		EFC15FED29F94E96008CEBAE /* Binding+onChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */; };
+		EFC15FEF29FA801C008CEBAE /* BindableTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */; };
+		EFC15FF129FABA60008CEBAE /* MKCoordinateRegion+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +31,15 @@
 		EF1DCA0129F6C3CF00E2D898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF1DCA0329F6C3CF00E2D898 /* S57Browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = S57Browser.entitlements; sourceTree = "<group>"; };
 		EF1DCA0529F6C3CF00E2D898 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF1DCA1229F6CFDE00E2D898 /* URL + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Extensions.swift"; sourceTree = "<group>"; };
+		EFC15FD429F8F038008CEBAE /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EFC15FE029F8FC96008CEBAE /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		EFC15FE229F90196008CEBAE /* S57Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S57Overlay.swift; sourceTree = "<group>"; };
+		EFC15FE429F902FE008CEBAE /* MKCoordinateRegion + Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion + Utils.swift"; sourceTree = "<group>"; };
+		EFC15FEA29F9441B008CEBAE /* UIImage + Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Resize.swift"; sourceTree = "<group>"; };
+		EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+onChange.swift"; sourceTree = "<group>"; };
+		EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC15FDF29F8F6C7008CEBAE /* SQLite in Frameworks */,
+				EF1DCA1129F6C70500E2D898 /* S57Parser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +74,9 @@
 		EF1DC9FC29F6C3CD00E2D898 /* S57Browser */ = {
 			isa = PBXGroup;
 			children = (
+				EFC15FD629F8F5C7008CEBAE /* MapView */,
 				EF1DC9FD29F6C3CD00E2D898 /* S57BrowserApp.swift */,
+				EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */,
 				EF1DC9FF29F6C3CD00E2D898 /* ContentView.swift */,
 				EF1DCA0129F6C3CF00E2D898 /* Assets.xcassets */,
 				EF1DCA0329F6C3CF00E2D898 /* S57Browser.entitlements */,
@@ -67,6 +91,21 @@
 				EF1DCA0529F6C3CF00E2D898 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFC15FD629F8F5C7008CEBAE /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				EFC15FD429F8F038008CEBAE /* MapView.swift */,
+				EFC15FE029F8FC96008CEBAE /* Feature.swift */,
+				EFC15FE229F90196008CEBAE /* S57Overlay.swift */,
+				EFC15FE429F902FE008CEBAE /* MKCoordinateRegion + Utils.swift */,
+				EFC15FEA29F9441B008CEBAE /* UIImage + Resize.swift */,
+				EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */,
+				EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */,
+				EF1DCA1229F6CFDE00E2D898 /* URL + Extensions.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +124,10 @@
 			dependencies = (
 			);
 			name = S57Browser;
+			packageProductDependencies = (
+				EF1DCA1029F6C70500E2D898 /* S57Parser */,
+				EFC15FDE29F8F6C7008CEBAE /* SQLite */,
+			);
 			productName = S57Browser;
 			productReference = EF1DC9FA29F6C3CD00E2D898 /* S57Browser.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +156,10 @@
 				Base,
 			);
 			mainGroup = EF1DC9F129F6C3CD00E2D898;
+			packageReferences = (
+				EF1DCA0F29F6C70500E2D898 /* XCRemoteSwiftPackageReference "S57Parser" */,
+				EFC15FDD29F8F6C7008CEBAE /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = EF1DC9FB29F6C3CD00E2D898 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC15FF129FABA60008CEBAE /* MKCoordinateRegion+Utils.swift in Sources */,
+				EFC15FE529F902FE008CEBAE /* MKCoordinateRegion + Utils.swift in Sources */,
+				EFC15FE329F90196008CEBAE /* S57Overlay.swift in Sources */,
 				EF1DCA0029F6C3CD00E2D898 /* ContentView.swift in Sources */,
+				EFC15FD529F8F038008CEBAE /* MapView.swift in Sources */,
+				EFC15FE129F8FC96008CEBAE /* Feature.swift in Sources */,
+				EFC15FED29F94E96008CEBAE /* Binding+onChange.swift in Sources */,
+				EFC15FEF29FA801C008CEBAE /* BindableTapGestureRecognizer.swift in Sources */,
 				EF1DC9FE29F6C3CD00E2D898 /* S57BrowserApp.swift in Sources */,
+				EF1DCA1329F6CFDE00E2D898 /* URL + Extensions.swift in Sources */,
+				EFC15FEB29F9441B008CEBAE /* UIImage + Resize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +253,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,6 +307,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -269,6 +329,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -279,15 +340,17 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.2;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = es.gorina.S57Browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +370,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,15 +381,17 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.2;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = es.gorina.S57Browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,6 +420,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF1DCA0F29F6C70500E2D898 /* XCRemoteSwiftPackageReference "S57Parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fgorina/S57Parser.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		EFC15FDD29F8F6C7008CEBAE /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF1DCA1029F6C70500E2D898 /* S57Parser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF1DCA0F29F6C70500E2D898 /* XCRemoteSwiftPackageReference "S57Parser" */;
+			productName = S57Parser;
+		};
+		EFC15FDE29F8F6C7008CEBAE /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFC15FDD29F8F6C7008CEBAE /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF1DC9F229F6C3CD00E2D898 /* Project object */;
 }
