@@ -87,28 +87,39 @@ class S57OverlayRenderer : MKOverlayRenderer {
         guard let overlay = overlay as? S57Overlay else { return }
         
         for feature in overlay.features{
-            
-            if let regionRect = feature.region?.mapRect, regionRect.intersects(rect){
+             
+            if let regionRect = feature.region?.mapRect.offsetBy(dx: 1.0 / zoomScale, dy: 1.0 / zoomScale), regionRect.intersects(rect){
                 
                 // OK now draw it
                 
                 switch feature.prim{
                     
                 case .point:
+                    var imageName = "SpecialPP_Pillar"
+                    if let f = feature as? S57Feature{
+                        imageName = S57PointRenderer.imageForFeature(f)
+                    }
+                    
                     
 #if os(macOS)
                     if let point  =  feature.point{
                         
+                       
+                        
                         let cgPoint = self.point(for: point)
-                        if let nsImage = NSImage(named: "Cardinal_Pillar_North"){
-                            let baseSize = 40.0
-                            let size = baseSize / zoomScale
-                            let rect = CGRect(x: cgPoint.x - size/2.0, y: cgPoint.y - size/2.0, width: size, height: size)
+                        if let nsImage = NSImage(named: imageName){
+                            let imageSize = nsImage.size
+                            let relativeSize = 8.0
+                            let baseSize = CGSize(width: imageSize.width / zoomScale / relativeSize, height: imageSize.height / zoomScale / relativeSize)
                             
+                            let someRect = CGRect(x: cgPoint.x - baseSize.width/2.0, y: cgPoint.y - baseSize.height/2.0, width: baseSize.width, height: baseSize.height)
+                            
+                            let diplayMapRect = self.mapRect(for: someRect)
+                    
                             let old = NSGraphicsContext.current
                             let nsContext = NSGraphicsContext(cgContext: context, flipped: true)
                             NSGraphicsContext.current = nsContext
-                            nsImage.draw(in: rect)
+                            nsImage.draw(in: someRect)
                             NSGraphicsContext.current = old
                             
                         }else{
@@ -127,21 +138,24 @@ class S57OverlayRenderer : MKOverlayRenderer {
                     
                     
                     if let point = feature.point{
-                            
                             let cgPoint = self.point(for: point)
                         
-                        if let uiImage = UIImage(named: "Cardinal_Pillar_North"){
+                        if let uiImage = UIImage(named: imageName){
+                            let imageSize = uiImage.size
+                            let relativeSize = 8.0
                             
                             context.saveGState()
-                             let baseSize = 40.0
-                            let size = baseSize / zoomScale
-                            let rect = CGRect(x: cgPoint.x - size/2.0, y: cgPoint.y - size/2.0, width: size, height: size)
-                            context.translateBy(x: 0, y: rect.height)
+                            let baseSize = CGSize(width: imageSize.width / zoomScale / relativeSize, height: imageSize.height / zoomScale / relativeSize)
+                         
+                            let someRect = CGRect(x: cgPoint.x - baseSize.width/2.0, y: cgPoint.y - baseSize.height/2.0, width: baseSize.width, height: baseSize.height)
+                            context.translateBy(x: 0, y: cgPoint.y)
                             context.scaleBy(x: 1.0, y: -1.0)
+                            context.translateBy(x: 0, y: -cgPoint.y)
 
                             if let cgimage = uiImage.cgImage {
-                                context.draw(cgimage, in: rect)
+                                context.draw(cgimage, in: someRect)
                             }
+                           
                             context.restoreGState()
                         }else{
                             let d = 5.0 / zoomScale
@@ -153,8 +167,6 @@ class S57OverlayRenderer : MKOverlayRenderer {
                             context.addEllipse(in: rect)
                             context.drawPath(using: .fillStroke)
                         }
-                            
-                        
                     }
 #endif
                     

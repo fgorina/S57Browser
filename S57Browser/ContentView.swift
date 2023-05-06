@@ -48,6 +48,8 @@ struct ContentView: View {
     
     @State var lastTap : MapTap?
     
+    @State var onlyMap : Bool = false
+    
     
     func lookup(items : [any S57Displayable], loc : CLLocationCoordinate2D) -> (any S57Displayable)?{
         
@@ -309,6 +311,7 @@ struct ContentView: View {
                                 Section("Attributes"){
                                     ForEach(attributes) {element in
                                         Text("\(element.decodedAttribute ?? "") : \(element.decodedValue ?? "")")
+                                        Text("\(element.attribute) : \(element.value)")
                                         
                                     }
                                 }
@@ -830,7 +833,11 @@ struct ContentView: View {
                     isImporting = true
                 }
                 Spacer()
+                
                 Toggle("Raw", isOn: $raw)
+                    .toggleStyle(.button)
+                
+                Toggle("Map", isOn: $onlyMap)
                     .toggleStyle(.button)
             }
             .fileImporter(
@@ -848,7 +855,17 @@ struct ContentView: View {
                 }
             }
             
-            if let _ = package {
+            if onlyMap {
+                    MapView(features: Binding<[any S57Displayable]>(
+                        get: { self.features as [any S57Displayable]},
+                        set: { self.features = $0 as? [S57Feature] ?? []}
+                    ), region: $region, currentZoom: $zoom, tap: $lastTap.onChange({ tap in
+                        
+                        print("Location \(tap!.location)")
+                    })
+                    )
+            }
+            else if let _ = package {
                 packageView
             }else {
                 if raw {
@@ -861,8 +878,15 @@ struct ContentView: View {
         }
         .padding()
     }
-    
+    init(){
+        let url = FileManager.default.getDocumentsDirectory()
+        print(url)
+        
+
+    }
+
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

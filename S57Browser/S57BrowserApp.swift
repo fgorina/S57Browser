@@ -11,6 +11,8 @@ import SwiftUI
 struct S57BrowserApp: App {
     
     var body: some Scene {
+        
+        
         WindowGroup {
             ContentView()
         }

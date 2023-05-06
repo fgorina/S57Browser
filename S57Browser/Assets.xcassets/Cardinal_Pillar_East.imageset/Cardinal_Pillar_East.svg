@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Basic//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic.dtd">
+<svg version="1.1" baseProfile="basic"
+	 id="svg2" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" sodipodi:version="0.32" inkscape:version="0.46" sodipodi:docname="Cardinal_Pillar_West.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="320px"
+	 viewBox="0 0 320 320" xml:space="preserve">
+<sodipodi:namedview  id="base" inkscape:current-layer="svg2" inkscape:window-y="-3" inkscape:window-x="-5" inkscape:window-width="1440" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="843" gridtolerance="10.0" guidetolerance="10.0" showgrid="false" inkscape:cy="173.57576" pagecolor="#ffffff" bordercolor="#666666" inkscape:cx="150.73066" borderopacity="1.0" objecttolerance="10.0" inkscape:zoom="1.325">
+	</sodipodi:namedview>
+<defs>
+	
+	
+		<inkscape:perspective  id="perspective9" inkscape:persp3d-origin="200 : 133.33333 : 1" inkscape:vp_z="400 : 200 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 200 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+</defs>
+<polygon fill="#000407" points="192.402,34.724 197.183,70.692 222.996,44.974 "/>
+<polygon fill="#000407" points="220.027,4.432 194.246,30.182 225.152,40.526 "/>
+<path fill="#000407" d="M194.255,73.724l-5.594,16.719l-6.531-2.094l-30.469,68.063l-29.781,32.594h-7.781l-0.125,5.656h31.063
+	c1.288,5.532,6.233,9.656,12.156,9.656c5.925,0,10.871-4.12,12.156-9.656h24.125v-5.656h-7.781l-2.469-22.344l16.625-72.625
+	l-7.156-2.281l5.594-16.688L194.255,73.724z"/>
+<path fill="#000407" d="M186.38,96.849l4.969,1.781l-15.219,68.031l2.469,22.344h-9.25c-1.282-5.54-6.229-9.688-12.156-9.688
+	c-5.926,0-10.872,4.15-12.156,9.688h-13.594l26.25-28.375L186.38,96.849z"/>
+<circle fill="#FFFFFF" stroke="#000000" cx="157.18" cy="191.83" r="7.5"/>
+<path id="path2399" fill="none" stroke="#000000" d="M171.321,118.491l17.358,6.792"/>
+<path id="path2401" stroke="#000000" d="M154.717,159.245l24.906,9.057"/>
+<path id="path2403" fill="#FFCC00" d="M166.876,162.746l-8.383-3.114l8.438-18.671c4.641-10.269,8.646-18.88,8.902-19.136
+	c0.256-0.256,2.461,0.309,4.9,1.255l4.436,1.72l-4.486,20.058c-2.469,11.032-4.698,20.27-4.956,20.531
+	C175.47,165.648,171.487,164.459,166.876,162.746L166.876,162.746z"/>
+<path id="path2405" fill="#000407" d="M180.188,120.981l-3.523-1.651l4.956-11.054l4.956-11.054l2.152,0.75
+	c1.185,0.413,2.153,0.851,2.153,0.973c0,0.202-3.96,17.989-4.916,22.083C185.482,123.102,184.699,123.096,180.188,120.981z"/>
+<path id="path2407" fill="#000407" d="M135.485,185.179c1.667-1.764,7.366-7.858,12.664-13.543l9.633-10.335l8.437,3.02
+	c4.641,1.66,8.728,3.307,9.082,3.66c0.549,0.545,2.619,15.08,2.719,19.086c0.027,1.114-0.674,1.32-4.496,1.32
+	c-3.414,0-4.528-0.265-4.528-1.074c0-1.537-3.579-5.579-6.09-6.877c-2.829-1.463-8.327-1.404-11.531,0.124
+	c-1.431,0.683-3.506,2.697-4.663,4.528l-2.085,3.299h-6.085h-6.085L135.485,185.179z"/>
+</svg>

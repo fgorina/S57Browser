@@ -101,7 +101,7 @@ struct MapView: NSViewRepresentable {
         mapView.setCameraZoomRange(czr, animated: true)
         
         
-        mapView.showsZoomControls = true
+        //mapView.showsZoomControls = true
         
         //mapView.showsScale = true
         //mapView.showsCompass = true
@@ -129,9 +129,10 @@ struct MapView: NSViewRepresentable {
         return mapView
     }
     
-    func sizeThatFits(_ proposal: ProposedViewSize, nsView: MKMapView, context: Context) -> CGSize? {
+    /*func sizeThatFits(_ proposal: ProposedViewSize, nsView: MKMapView, context: Context) -> CGSize? {
         CGSize(width: 400, height: 400)
     }
+     */
 }
         
     #endif
@@ -253,12 +254,12 @@ extension MapView {
         
         //MARK: - MKAnnotationViews
         
-        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+/*        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             
             return nil
             
         }
-        
+*/
         
         func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
             

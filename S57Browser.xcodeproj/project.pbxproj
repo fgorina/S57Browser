@@ -22,6 +22,9 @@
 		EFC15FED29F94E96008CEBAE /* Binding+onChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */; };
 		EFC15FEF29FA801C008CEBAE /* BindableTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */; };
 		EFC15FF129FABA60008CEBAE /* MKCoordinateRegion+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */; };
+		EFF324E12A04F90300D49ECF /* S57PointRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E02A04F90300D49ECF /* S57PointRenderer.swift */; };
+		EFF324E32A068ED200D49ECF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E22A068ED200D49ECF /* Storage.swift */; };
+		EFF324E52A06918900D49ECF /* FileManager+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E42A06918900D49ECF /* FileManager+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,10 @@
 		EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+onChange.swift"; sourceTree = "<group>"; };
 		EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Utils.swift"; sourceTree = "<group>"; };
+		EFF324E02A04F90300D49ECF /* S57PointRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S57PointRenderer.swift; sourceTree = "<group>"; };
+		EFF324E22A068ED200D49ECF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		EFF324E42A06918900D49ECF /* FileManager+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utils.swift"; sourceTree = "<group>"; };
+		EFF324E62A0694A000D49ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,7 @@
 		EF1DC9FC29F6C3CD00E2D898 /* S57Browser */ = {
 			isa = PBXGroup;
 			children = (
+				EFF324E62A0694A000D49ECF /* Info.plist */,
 				EFC15FD629F8F5C7008CEBAE /* MapView */,
 				EF1DC9FD29F6C3CD00E2D898 /* S57BrowserApp.swift */,
 				EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */,
@@ -81,6 +89,8 @@
 				EF1DCA0129F6C3CF00E2D898 /* Assets.xcassets */,
 				EF1DCA0329F6C3CF00E2D898 /* S57Browser.entitlements */,
 				EF1DCA0429F6C3CF00E2D898 /* Preview Content */,
+				EFF324E22A068ED200D49ECF /* Storage.swift */,
+				EFF324E42A06918900D49ECF /* FileManager+Utils.swift */,
 			);
 			path = S57Browser;
 			sourceTree = "<group>";
@@ -104,6 +114,7 @@
 				EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */,
 				EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */,
 				EF1DCA1229F6CFDE00E2D898 /* URL + Extensions.swift */,
+				EFF324E02A04F90300D49ECF /* S57PointRenderer.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC15FF129FABA60008CEBAE /* MKCoordinateRegion+Utils.swift in Sources */,
+				EFF324E12A04F90300D49ECF /* S57PointRenderer.swift in Sources */,
 				EFC15FE529F902FE008CEBAE /* MKCoordinateRegion + Utils.swift in Sources */,
 				EFC15FE329F90196008CEBAE /* S57Overlay.swift in Sources */,
 				EF1DCA0029F6C3CD00E2D898 /* ContentView.swift in Sources */,
@@ -197,6 +209,8 @@
 				EF1DC9FE29F6C3CD00E2D898 /* S57BrowserApp.swift in Sources */,
 				EF1DCA1329F6CFDE00E2D898 /* URL + Extensions.swift in Sources */,
 				EFC15FEB29F9441B008CEBAE /* UIImage + Resize.swift in Sources */,
+				EFF324E32A068ED200D49ECF /* Storage.swift in Sources */,
+				EFF324E52A06918900D49ECF /* FileManager+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +343,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = S57Browser/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -370,7 +386,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = S57Browser/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
