@@ -11,6 +11,7 @@ import SwiftUI
 import Combine
 import MapKit
 import S57Parser
+import S57Overlay
 
 
 struct MapTap {

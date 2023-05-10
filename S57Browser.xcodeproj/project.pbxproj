@@ -9,46 +9,37 @@
 /* Begin PBXBuildFile section */
 		EF1DC9FE29F6C3CD00E2D898 /* S57BrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DC9FD29F6C3CD00E2D898 /* S57BrowserApp.swift */; };
 		EF1DCA0029F6C3CD00E2D898 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DC9FF29F6C3CD00E2D898 /* ContentView.swift */; };
-		EF1DCA0229F6C3CF00E2D898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1DCA0129F6C3CF00E2D898 /* Assets.xcassets */; };
 		EF1DCA0629F6C3CF00E2D898 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1DCA0529F6C3CF00E2D898 /* Preview Assets.xcassets */; };
 		EF1DCA1129F6C70500E2D898 /* S57Parser in Frameworks */ = {isa = PBXBuildFile; productRef = EF1DCA1029F6C70500E2D898 /* S57Parser */; };
 		EF1DCA1329F6CFDE00E2D898 /* URL + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1DCA1229F6CFDE00E2D898 /* URL + Extensions.swift */; };
 		EFC15FD529F8F038008CEBAE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FD429F8F038008CEBAE /* MapView.swift */; };
 		EFC15FDF29F8F6C7008CEBAE /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = EFC15FDE29F8F6C7008CEBAE /* SQLite */; };
 		EFC15FE129F8FC96008CEBAE /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FE029F8FC96008CEBAE /* Feature.swift */; };
-		EFC15FE329F90196008CEBAE /* S57Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FE229F90196008CEBAE /* S57Overlay.swift */; };
-		EFC15FE529F902FE008CEBAE /* MKCoordinateRegion + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FE429F902FE008CEBAE /* MKCoordinateRegion + Utils.swift */; };
 		EFC15FEB29F9441B008CEBAE /* UIImage + Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEA29F9441B008CEBAE /* UIImage + Resize.swift */; };
 		EFC15FED29F94E96008CEBAE /* Binding+onChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */; };
 		EFC15FEF29FA801C008CEBAE /* BindableTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */; };
-		EFC15FF129FABA60008CEBAE /* MKCoordinateRegion+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */; };
-		EFF324E12A04F90300D49ECF /* S57PointRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E02A04F90300D49ECF /* S57PointRenderer.swift */; };
 		EFF324E32A068ED200D49ECF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E22A068ED200D49ECF /* Storage.swift */; };
 		EFF324E52A06918900D49ECF /* FileManager+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E42A06918900D49ECF /* FileManager+Utils.swift */; };
-		EFF324E82A0A710000D49ECF /* S57Displayable + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E72A0A710000D49ECF /* S57Displayable + Extensions.swift */; };
+		EFF324ED2A0BB4CF00D49ECF /* S57Overlay in Frameworks */ = {isa = PBXBuildFile; productRef = EFF324EC2A0BB4CF00D49ECF /* S57Overlay */; };
+		EFF324F12A0BBB0A00D49ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFF324F02A0BBB0A00D49ECF /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF1DC9FA29F6C3CD00E2D898 /* S57Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = S57Browser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1DC9FD29F6C3CD00E2D898 /* S57BrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S57BrowserApp.swift; sourceTree = "<group>"; };
 		EF1DC9FF29F6C3CD00E2D898 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EF1DCA0129F6C3CF00E2D898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF1DCA0329F6C3CF00E2D898 /* S57Browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = S57Browser.entitlements; sourceTree = "<group>"; };
 		EF1DCA0529F6C3CF00E2D898 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF1DCA1229F6CFDE00E2D898 /* URL + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Extensions.swift"; sourceTree = "<group>"; };
 		EFC15FD429F8F038008CEBAE /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		EFC15FE029F8FC96008CEBAE /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
-		EFC15FE229F90196008CEBAE /* S57Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S57Overlay.swift; sourceTree = "<group>"; };
-		EFC15FE429F902FE008CEBAE /* MKCoordinateRegion + Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion + Utils.swift"; sourceTree = "<group>"; };
 		EFC15FEA29F9441B008CEBAE /* UIImage + Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Resize.swift"; sourceTree = "<group>"; };
 		EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+onChange.swift"; sourceTree = "<group>"; };
 		EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTapGestureRecognizer.swift; sourceTree = "<group>"; };
-		EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Utils.swift"; sourceTree = "<group>"; };
-		EFF324E02A04F90300D49ECF /* S57PointRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S57PointRenderer.swift; sourceTree = "<group>"; };
 		EFF324E22A068ED200D49ECF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EFF324E42A06918900D49ECF /* FileManager+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utils.swift"; sourceTree = "<group>"; };
 		EFF324E62A0694A000D49ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EFF324E72A0A710000D49ECF /* S57Displayable + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "S57Displayable + Extensions.swift"; sourceTree = "<group>"; };
+		EFF324F02A0BBB0A00D49ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF324ED2A0BB4CF00D49ECF /* S57Overlay in Frameworks */,
 				EFC15FDF29F8F6C7008CEBAE /* SQLite in Frameworks */,
 				EF1DCA1129F6C70500E2D898 /* S57Parser in Frameworks */,
 			);
@@ -67,6 +59,7 @@
 		EF1DC9F129F6C3CD00E2D898 = {
 			isa = PBXGroup;
 			children = (
+				EFF324F02A0BBB0A00D49ECF /* Assets.xcassets */,
 				EF1DC9FC29F6C3CD00E2D898 /* S57Browser */,
 				EF1DC9FB29F6C3CD00E2D898 /* Products */,
 			);
@@ -88,7 +81,6 @@
 				EF1DC9FD29F6C3CD00E2D898 /* S57BrowserApp.swift */,
 				EFC15FEC29F94E96008CEBAE /* Binding+onChange.swift */,
 				EF1DC9FF29F6C3CD00E2D898 /* ContentView.swift */,
-				EF1DCA0129F6C3CF00E2D898 /* Assets.xcassets */,
 				EF1DCA0329F6C3CF00E2D898 /* S57Browser.entitlements */,
 				EF1DCA0429F6C3CF00E2D898 /* Preview Content */,
 				EFF324E22A068ED200D49ECF /* Storage.swift */,
@@ -110,14 +102,9 @@
 			children = (
 				EFC15FD429F8F038008CEBAE /* MapView.swift */,
 				EFC15FE029F8FC96008CEBAE /* Feature.swift */,
-				EFF324E72A0A710000D49ECF /* S57Displayable + Extensions.swift */,
-				EFC15FE229F90196008CEBAE /* S57Overlay.swift */,
-				EFC15FE429F902FE008CEBAE /* MKCoordinateRegion + Utils.swift */,
 				EFC15FEA29F9441B008CEBAE /* UIImage + Resize.swift */,
 				EFC15FEE29FA801C008CEBAE /* BindableTapGestureRecognizer.swift */,
-				EFC15FF029FABA60008CEBAE /* MKCoordinateRegion+Utils.swift */,
 				EF1DCA1229F6CFDE00E2D898 /* URL + Extensions.swift */,
-				EFF324E02A04F90300D49ECF /* S57PointRenderer.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -141,6 +128,7 @@
 			packageProductDependencies = (
 				EF1DCA1029F6C70500E2D898 /* S57Parser */,
 				EFC15FDE29F8F6C7008CEBAE /* SQLite */,
+				EFF324EC2A0BB4CF00D49ECF /* S57Overlay */,
 			);
 			productName = S57Browser;
 			productReference = EF1DC9FA29F6C3CD00E2D898 /* S57Browser.app */;
@@ -173,6 +161,7 @@
 			packageReferences = (
 				EF1DCA0F29F6C70500E2D898 /* XCRemoteSwiftPackageReference "S57Parser" */,
 				EFC15FDD29F8F6C7008CEBAE /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				EFF324EB2A0BB4CF00D49ECF /* XCRemoteSwiftPackageReference "S57Overlay" */,
 			);
 			productRefGroup = EF1DC9FB29F6C3CD00E2D898 /* Products */;
 			projectDirPath = "";
@@ -188,8 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF324F12A0BBB0A00D49ECF /* Assets.xcassets in Resources */,
 				EF1DCA0629F6C3CF00E2D898 /* Preview Assets.xcassets in Resources */,
-				EF1DCA0229F6C3CF00E2D898 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,10 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC15FF129FABA60008CEBAE /* MKCoordinateRegion+Utils.swift in Sources */,
-				EFF324E12A04F90300D49ECF /* S57PointRenderer.swift in Sources */,
-				EFC15FE529F902FE008CEBAE /* MKCoordinateRegion + Utils.swift in Sources */,
-				EFC15FE329F90196008CEBAE /* S57Overlay.swift in Sources */,
 				EF1DCA0029F6C3CD00E2D898 /* ContentView.swift in Sources */,
 				EFC15FD529F8F038008CEBAE /* MapView.swift in Sources */,
 				EFC15FE129F8FC96008CEBAE /* Feature.swift in Sources */,
@@ -211,7 +196,6 @@
 				EFC15FEF29FA801C008CEBAE /* BindableTapGestureRecognizer.swift in Sources */,
 				EF1DC9FE29F6C3CD00E2D898 /* S57BrowserApp.swift in Sources */,
 				EF1DCA1329F6CFDE00E2D898 /* URL + Extensions.swift in Sources */,
-				EFF324E82A0A710000D49ECF /* S57Displayable + Extensions.swift in Sources */,
 				EFC15FEB29F9441B008CEBAE /* UIImage + Resize.swift in Sources */,
 				EFF324E32A068ED200D49ECF /* Storage.swift in Sources */,
 				EFF324E52A06918900D49ECF /* FileManager+Utils.swift in Sources */,
@@ -460,6 +444,14 @@
 				minimumVersion = 0.14.1;
 			};
 		};
+		EFF324EB2A0BB4CF00D49ECF /* XCRemoteSwiftPackageReference "S57Overlay" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fgorina/S57Overlay.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -472,6 +464,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EFC15FDD29F8F6C7008CEBAE /* XCRemoteSwiftPackageReference "SQLite.swift" */;
 			productName = SQLite;
+		};
+		EFF324EC2A0BB4CF00D49ECF /* S57Overlay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFF324EB2A0BB4CF00D49ECF /* XCRemoteSwiftPackageReference "S57Overlay" */;
+			productName = S57Overlay;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
