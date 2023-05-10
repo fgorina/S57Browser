@@ -50,6 +50,62 @@ struct ContentView: View {
     
     @State var onlyMap : Bool = false
     
+    @State var showSelector : Bool = false
+    
+    
+    func processTap(_ tap: MapTap){
+        
+        var someFeatures = self.features.filter { value in
+            
+            if let region = value.region{
+                if value.prim == .point{
+                    return tap.rect.contains(MKMapPoint(region.center))
+                }else{
+                    return region.mapRect.intersects(tap.rect)
+                }
+            }
+            return false
+        }
+        
+        someFeatures.sort { (f1 : S57Feature, f2 : S57Feature) in
+            if f1.prim == .point && f2.prim != .point{
+                return true
+            }else if f1.prim != .point && f2.prim == .point {
+                return false
+            }else if f1.prim == .line && f2.prim != .line {
+                return true
+            }else if f1.prim != .line && f2.prim == .line {
+                return false
+            }else{
+                return f1.id < f2.id
+            }
+        }
+        
+        var someAttributes : [S57Attribute] = []
+        var somenAttributes : [S57Attribute] = []
+        
+        if !someFeatures.isEmpty{
+            someAttributes = (someFeatures[0].attributes.map({ (key, value) in
+                value
+            })).sorted(by: { v1, v2 in
+                v1.attribute < v2.attribute
+            })
+            
+            somenAttributes = (someFeatures[0].nationalAttributes.map({ (key, value) in
+                value
+            })).sorted(by: { v1, v2 in
+                v1.attribute < v2.attribute
+            })
+        }
+        
+        DispatchQueue.main.async{
+            aFeature = someFeatures
+            attributes = someAttributes
+            nAttributes = somenAttributes
+            
+        }
+        
+    }
     
     func lookup(items : [any S57Displayable], loc : CLLocationCoordinate2D) -> (any S57Displayable)?{
         
@@ -119,6 +175,110 @@ struct ContentView: View {
     }
     var body: some View {
         
+        
+        
+        //MARK: - Selector
+        
+        
+        let selector = Group {
+            List(selection: $multiSelectionp.onChange({ ms in
+                
+                featureClass = featureClasses.first(where: { element in
+                    let ele = ms.first
+                    return element.0 == ele
+                })
+                
+                
+                features = package!.currentFeatures.values.filter({ f in
+                    ms.contains(f.objl)
+                }).sorted(by: { (f1 : S57Feature, f2 : S57Feature) in
+                    if f1.prim == .point && f2.prim != .point{
+                        return true
+                    }else if f1.prim != .point && f2.prim == .point {
+                        return false
+                    }else if f1.prim == .line && f2.prim != .line {
+                        return true
+                    }else if f1.prim != .line && f2.prim == .line {
+                        return false
+                    }else{
+                        return f1.id < f2.id
+                    }
+                }
+                ).reversed()
+            })
+            ){
+                
+                ForEach(featureClasses, id: \.0) { fc in
+                    Text("\(fc.1) (\(fc.0))")
+                }
+                
+                
+            }
+        }
+        //MARK: - Info View
+        
+        let infoView = Group {
+            if !aFeature.isEmpty {
+                let aFeature = aFeature[0]
+                VStack{
+                    
+                    List{
+                        Section("General"){
+                            Text("Record id: \(aFeature.rcnm) \(aFeature.rcid)")
+                            Text("Object id: \(aFeature.agen) \(aFeature.fidn) \(aFeature.fids) ")
+                            Text("Object class: \(aFeature.objl) \(aFeature.decodedObjl ?? "") ")
+                            Text("Updating: \(aFeature.ruin.description) \(aFeature.rver) ")
+                            Text("Geometric shape: \(aFeature.prim.description)")
+                            Text("Envelope: \(aFeature.region?.description ?? "")")
+                            if let l = aFeature.region?.center{
+                                Text("Decimal \(l.latitude) \(l.longitude)")
+                            }
+                            
+                        }
+                        Section("Attributes"){
+                            ForEach(attributes) {element in
+                                Text("\(element.decodedAttribute ?? "") : \(element.decodedValue ?? "")")
+                            }
+                        }
+                        Section("National Attributes"){
+                            ForEach(nAttributes) {element in
+                                Text("\(element.decodedAttribute ?? "") : \(element.decodedValue ?? "")")
+                                
+                            }
+                        }
+                        
+                        Section("Related Features"){
+                            ForEach(aFeature.ffpt) {element in
+                                let ri : String = element.relationshipIndicator.description
+                                if let referencedFeature = element.feature { //s57.features[element.id] {
+                                    let objl = referencedFeature.decodedObjl ?? ""
+                                    
+                                    Text("\(ri) : \(objl) (\(referencedFeature.agen) \(referencedFeature.fidn) \(referencedFeature.fids)) \(element.comment)")
+                                        .onTapGesture {
+                                            self.aFeature = [referencedFeature]
+                                            attributes = referencedFeature.attributes.map({ (key, value) in
+                                                value
+                                            })
+                                            nAttributes = referencedFeature.nationalAttributes.map({ (key, value) in
+                                                value
+                                            })
+                                            aVector = nil
+                                            otherVector = nil
+                                            
+                                        }
+                                }else {
+                                    Text("\(ri) Not found referenced feature")
+                                }
+                                
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+        
         //MARK: - PackageView
         
         let packageView =  Group {
@@ -150,11 +310,11 @@ struct ContentView: View {
                                 }
                             }
                         })
-                        
-                        
-                        
+                                
+                                
+                                
                         )
-                            .frame(width: 400, height: 400)
+                        .frame(width: 400, height: 400)
                         
                         
                         List{
@@ -189,9 +349,7 @@ struct ContentView: View {
                     }
                     List(selection: $multiSelectionp.onChange({ ms in
                         
-                        if ms.count != 0{
-                            print("Got it")
-                        }
+
                         featureClass = featureClasses.first(where: { element in
                             let ele = ms.first
                             return element.0 == ele
@@ -200,9 +358,20 @@ struct ContentView: View {
                         
                         features = package!.currentFeatures.values.filter({ f in
                             ms.contains(f.objl)
-                        }).sorted(by: { f1, f2 in
-                            f1.rcid < f2.rcid
-                        })
+                        }).sorted(by: { (f1 : S57Feature, f2 : S57Feature) in
+                            if f1.prim == .point && f2.prim != .point{
+                                return true
+                            }else if f1.prim != .point && f2.prim == .point {
+                                return false
+                            }else if f1.prim == .line && f2.prim != .line {
+                                return true
+                            }else if f1.prim != .line && f2.prim == .line {
+                                return false
+                            }else{
+                                return f1.id < f2.id
+                            }
+                        }
+                        ).reversed()
                         if !features.isEmpty{
                             
                             if let someRegion = features[0].region{
@@ -237,30 +406,6 @@ struct ContentView: View {
                         Section(package?.currentItem?.file ?? ""){
                             ForEach(featureClasses, id: \.0) { fc in
                                 Text("\(fc.1) (\(fc.0))")
-                                /*.onTapGesture {
-                                 featureClass = fc
-                                 features = package!.currentFeatures.values.filter({ f in
-                                 f.objl == fc.0
-                                 }).sorted(by: { f1, f2 in
-                                 f1.rcid < f2.rcid
-                                 })
-                                 if !features.isEmpty{
-                                 aFeature = [features[0]]
-                                 attributes = (aFeature[0].attributes.map({ (key, value) in
-                                 value
-                                 }) ).sorted(by: { v1, v2 in
-                                 v1.attribute < v2.attribute
-                                 })
-                                 nAttributes = (aFeature[0].nationalAttributes.map({ (key, value) in
-                                 value
-                                 } )).sorted(by: { v1, v2 in
-                                 v1.attribute < v2.attribute
-                                 })
-                                 aVector = nil
-                                 
-                                 otherVector = nil
-                                 }
-                                 }*/
                             }
                         }
                     }
@@ -356,8 +501,8 @@ struct ContentView: View {
                                         print("Location \(tap!.location)")
                                     })
                                     )
-                                        .frame(width: 400, height: 400)
-
+                                    .frame(width: 400, height: 400)
+                                    
                                 }
                                 
                                 Section("Geometry"){
@@ -379,17 +524,17 @@ struct ContentView: View {
                                         
                                     }
                                 }
-                              /*  Section("Coordinates"){
-                                    ForEach(aFeature.coordinates) {element in
-                                        
-                                        Text("\(element.latitude), \(element.longitude) : \( element.depth?.formatted() ?? "" )")
-                                    }
-                                }
-                               */
+                                /*  Section("Coordinates"){
+                                 ForEach(aFeature.coordinates) {element in
+                                 
+                                 Text("\(element.latitude), \(element.longitude) : \( element.depth?.formatted() ?? "" )")
+                                 }
+                                 }
+                                 */
                                 
                             }
                             
-
+                            
                         }
                         
                         
@@ -699,7 +844,7 @@ struct ContentView: View {
                                 get: { self.features as [any S57Displayable]},
                                 set: { self.features = $0 as? [S57Feature] ?? []}
                             ), region: $region, currentZoom: $zoom, tap: $lastTap)
-                                .frame(width: 400, height: 400)
+                            .frame(width: 400, height: 400)
                             
                             
                             Section("Geometry"){
@@ -722,7 +867,7 @@ struct ContentView: View {
                                 }
                             }
                             Section("Coordinates"){
-                                ForEach(aFeature.coordinates) {element in
+                                ForEach(aFeature.coordinates.exterior) {element in
                                     
                                     Text("\(element.latitude), \(element.longitude) : \( element.depth?.formatted() ?? "" )")
                                 }
@@ -834,6 +979,9 @@ struct ContentView: View {
                 }
                 Spacer()
                 
+                Toggle("Selector", isOn: $showSelector)
+                    .toggleStyle(.button)
+
                 Toggle("Raw", isOn: $raw)
                     .toggleStyle(.button)
                 
@@ -856,14 +1004,24 @@ struct ContentView: View {
             }
             
             if onlyMap {
-                    MapView(features: Binding<[any S57Displayable]>(
-                        get: { self.features as [any S57Displayable]},
-                        set: { self.features = $0 as? [S57Feature] ?? []}
-                    ), region: $region, currentZoom: $zoom, tap: $lastTap.onChange({ tap in
-                        
-                        print("Location \(tap!.location)")
-                    })
-                    )
+                ZStack{
+                    HStack{
+                        MapView(features: Binding<[any S57Displayable]>(
+                            get: { self.features as [any S57Displayable]},
+                            set: { self.features = $0 as? [S57Feature] ?? []}
+                        ), region: $region, currentZoom: $zoom, tap: $lastTap.onChange({ tap in
+                            if let tap = tap{
+                                processTap(tap)
+                            }
+                            
+                        })
+                        )
+                        infoView.frame(width: 300)
+                    }
+                    if showSelector{
+                        selector.frame(width: 400.0, height: 400.0)
+                    }
+                }
             }
             else if let _ = package {
                 packageView
@@ -882,9 +1040,9 @@ struct ContentView: View {
         let url = FileManager.default.getDocumentsDirectory()
         print(url)
         
-
+        
     }
-
+    
 }
 
 

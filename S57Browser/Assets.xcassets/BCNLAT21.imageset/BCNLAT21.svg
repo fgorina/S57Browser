@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 38 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1.01308,0,0,1.00381,-0.403378,-0.436258)">
-        <rect x="0.398" y="0.435" width="37.214" height="141.194" style="fill:rgb(240,101,119);stroke:black;stroke-width:0.99px;"/>
+<svg width="100%" height="100%" viewBox="0 0 5 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(0.0990228,0,0,0.100381,0.527501,0.523303)">
+        <rect x="0.398" y="0.435" width="37.214" height="141.194" style="fill:rgb(240,101,119);stroke:black;stroke-width:8.53px;"/>
     </g>
-    <circle cx="18.853" cy="70.745" r="8.497" style="stroke:black;stroke-width:1px;"/>
+    <g transform="matrix(0.0977444,0,0,0.1,0.566929,0.566929)">
+        <circle cx="18.853" cy="70.745" r="8.497"/>
+    </g>
 </svg>

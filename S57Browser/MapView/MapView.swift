@@ -16,6 +16,7 @@ import S57Parser
 struct MapTap {
     var time : Date
     var location : CLLocation
+    var rect: MKMapRect
     //var center : CLLocation
 }
 
@@ -140,9 +141,21 @@ struct MapView: NSViewRepresentable {
 extension MapView {
     
     func checkTap(pt: CGPoint, mapView: MKMapView){
+        
+        let delta = 10.0  // It is qhat we consider near
             let coord = mapView.convert(pt, toCoordinateFrom: mapView)
+        
+            // Compute a map rect of
+        
+        let pt1 = CGPoint(x: pt.x - delta, y: pt.y - delta)
+        let pt2 = CGPoint(x: pt.x + delta, y: pt.y + delta)
+        
+        let c1 = MKMapPoint(mapView.convert(pt1, toCoordinateFrom: mapView))
+        let c2 = MKMapPoint(mapView.convert(pt2, toCoordinateFrom: mapView))
+        
+        let mapRect = MKMapRect(x: min(c1.x,c2.x), y: min(c1.y,c2.y), width: abs(c1.x-c2.x), height: abs(c1.y-c2.y))
 
-            let tap = MapTap(time : Date(), location: CLLocation(latitude: coord.latitude, longitude: coord.longitude))
+        let tap = MapTap(time : Date(), location: CLLocation(latitude: coord.latitude, longitude: coord.longitude), rect: mapRect)
         
         DispatchQueue.main.async {
             self.tap = tap

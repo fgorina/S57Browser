@@ -25,6 +25,7 @@
 		EFF324E12A04F90300D49ECF /* S57PointRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E02A04F90300D49ECF /* S57PointRenderer.swift */; };
 		EFF324E32A068ED200D49ECF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E22A068ED200D49ECF /* Storage.swift */; };
 		EFF324E52A06918900D49ECF /* FileManager+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E42A06918900D49ECF /* FileManager+Utils.swift */; };
+		EFF324E82A0A710000D49ECF /* S57Displayable + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324E72A0A710000D49ECF /* S57Displayable + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		EFF324E22A068ED200D49ECF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EFF324E42A06918900D49ECF /* FileManager+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utils.swift"; sourceTree = "<group>"; };
 		EFF324E62A0694A000D49ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EFF324E72A0A710000D49ECF /* S57Displayable + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "S57Displayable + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				EFC15FD429F8F038008CEBAE /* MapView.swift */,
 				EFC15FE029F8FC96008CEBAE /* Feature.swift */,
+				EFF324E72A0A710000D49ECF /* S57Displayable + Extensions.swift */,
 				EFC15FE229F90196008CEBAE /* S57Overlay.swift */,
 				EFC15FE429F902FE008CEBAE /* MKCoordinateRegion + Utils.swift */,
 				EFC15FEA29F9441B008CEBAE /* UIImage + Resize.swift */,
@@ -208,6 +211,7 @@
 				EFC15FEF29FA801C008CEBAE /* BindableTapGestureRecognizer.swift in Sources */,
 				EF1DC9FE29F6C3CD00E2D898 /* S57BrowserApp.swift in Sources */,
 				EF1DCA1329F6CFDE00E2D898 /* URL + Extensions.swift in Sources */,
+				EFF324E82A0A710000D49ECF /* S57Displayable + Extensions.swift in Sources */,
 				EFC15FEB29F9441B008CEBAE /* UIImage + Resize.swift in Sources */,
 				EFF324E32A068ED200D49ECF /* Storage.swift in Sources */,
 				EFF324E52A06918900D49ECF /* FileManager+Utils.swift in Sources */,
